@@ -6,7 +6,10 @@ use('BlogDB');
 /*
 Retrieve the data inside Visual Studio Code:
 
-Example1: passing an empty object:
+Example1: 
+Find all the documents in our collection "authors" 
+
+Passing an empty object:
 so the filter will grab all the objects "documents" of that collection
 */
 // db.authors.find({});
@@ -15,7 +18,7 @@ so the filter will grab all the objects "documents" of that collection
 We can add criteria to the empty object for matching/filtering:
 
 Example2:
-find the object(s)/document(s) with name "Alex Chow":
+Find the object(s)/document(s) with name "Alex Chow":
 
 NOTE: it's case-sensitive "Alex Chow" is not same as "alex chow"
 */
@@ -27,7 +30,7 @@ If no matching => []
 */
 
 /*
-To retrieve only the first one:
+To retrieve only the first one that matches the filter:
 */
 // db.authors.findOne({ "name": "Alex Chow" });
 
@@ -36,6 +39,15 @@ To retrieve only the first one:
 Will retrieve only the first document with name "Alex Chow"
 If no matching => null
 */
+
+/* 
+IMPORTANT NOTE:
+---------------
+We can also pass/write the document field(s) without ""
+when we use them to filter the result:
+*/
+db.authors.find({ name: "Sam Simpson" });
+
 
 /* 
 Example3: 
@@ -88,8 +100,10 @@ Find all document(s) with:
 - city name "Toronto"
 */
 
+/*
 db.authors.find({
     "online.followers": { "$gt": 100 },
     "online.following": { "$lt": 50 },
     "address.city": "Toronto"
 })
+*/

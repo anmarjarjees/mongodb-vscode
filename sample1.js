@@ -1,9 +1,9 @@
 /* 
-I am using .js extension so I can write/add comments
+I am using the .js extension for this file with comments
 
-we will ignore the "_id" field and just let MDB generates random one
-
-Notice that the "firstDoc" variable is just a JSON object
+Notice that:
+- we can ignore the "_id" field and just let MDB generates random one
+- that the "firstDoc" variable is just a JSON object
 */
 let firstDoc = {
     // "_id": "auth1",

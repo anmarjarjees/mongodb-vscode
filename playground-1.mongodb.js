@@ -1,11 +1,12 @@
 /* 
+CRUD Operations: CREATE, RETRIEVE/READ, UPDATE, and DELETE
+*/
+
+
+/* 
 Our database name is "BlogDB"
 */
 use('BlogDB');
-
-/* 
-CRUD Operations: CREATE, RETRIEVE/READ, UPDATE, and DELETE
-*/
 
 /* 
 Example1: 
@@ -63,14 +64,15 @@ E11000 duplicate key error collection: BlogDB.authors index:
 _id_ dup key: { _id: "auth1" }
 */
 
-
 /* 
 Example2: 
 Inserting multiple documents to our collection "authors"
 
 We can insert multiple records at once, by:
 - using insertMany()
-- providing/passing an array of JSON objects. Each object must have a unique id.
+- providing/passing an array of JSON objects (document). 
+- Each of the documents (JSON Objects) must have a unique id if we inter it manually.
+- The pattern => [ {}, {}, {}, {} ...and so on...]
 */
 
 /*
@@ -136,12 +138,3 @@ db.authors.insertMany([
 ]);
 */
 
-
-/* 
-Retrieve the data inside Visual Studio Code:
-
-Example3: 
-Find all the documents in our collection "authors" 
-passing an empty object:
-*/
-db.authors.find({});
