@@ -9,6 +9,15 @@ Our database name is "BlogDB"
 use('BlogDB');
 
 /* 
+We already created a collection named "authors" in our Atlas DB.
+You can refer to my MongoDB PDF file and PPT slides.
+
+NOTE:
+The code for creating a collection using MQL (Mongo Query Language):
+> db.createCollection('authors')
+*/
+
+/* 
 Example1: 
 Inserting one document to our collection "authors"
 
@@ -22,6 +31,12 @@ Notice that the id key format is: "_id"
 The command below can be used with MongoDB Shell,
 also with just tiny changes for the prefix "db.authors"
 same command can be used with node.js
+
+Review:
+Notice that we don't insert an array of JSON (BSON),
+Instead we insert only one JSON (BSON) object at a time.
+With inserting multiple documents (objects),
+we use the array "[]" simple to list the multiple objects with commas
 */
 
 /*

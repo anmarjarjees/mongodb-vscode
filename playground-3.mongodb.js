@@ -61,7 +61,7 @@ but we could use use it without
 
 /* 
 The output/results of updating:
-******************************
+*******************************
 
 The output (if no matching):
 {
