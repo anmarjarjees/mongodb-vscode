@@ -9,7 +9,7 @@ let firstDoc = {
     // "_id": "auth1",
     "name": "Alex Chow",
     "age": 55,
-    "email": "alex.chow@mongolive.com",
+    "email": "alex.chow@mongodemo.com",
     "address": {
         "street": "123 Yonge St.",
         "city": "Toronto",

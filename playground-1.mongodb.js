@@ -1,7 +1,12 @@
 /* 
 CRUD Operations: CREATE, RETRIEVE/READ, UPDATE, and DELETE
-*/
 
+NOTE:
+MQL File Extension => .mongodb.js
+
+Example: 
+insert.mongodb.js
+*/
 
 /* 
 Our database name is "BlogDB"
@@ -37,6 +42,8 @@ Notice that we don't insert an array of JSON (BSON),
 Instead we insert only one JSON (BSON) object at a time.
 With inserting multiple documents (objects),
 we use the array "[]" simple to list the multiple objects with commas
+
+Link: https://www.mongodb.com/docs/manual/reference/method/db.collection.insertOne/
 */
 
 /*
@@ -44,7 +51,7 @@ db.authors.insertOne({
     "_id": "auth1",
     "name": "Alex Chow",
     "age": 55,
-    "email": "alex.chow@mongolive.com",
+    "email": "alex.chow@mongodemo.com",
     "address": {
         "street": "123 Yonge St.",
         "city": "Toronto",
@@ -73,7 +80,7 @@ db.authors.insertOne({
 
 
 /* 
-Inserting the same id Error Message:
+Inserting the same id => Error Message:
 
 E11000 duplicate key error collection: BlogDB.authors index: 
 _id_ dup key: { _id: "auth1" }
@@ -88,15 +95,17 @@ We can insert multiple records at once, by:
 - providing/passing an array of JSON objects (document). 
 - Each of the documents (JSON Objects) must have a unique id if we inter it manually.
 - The pattern => [ {}, {}, {}, {} ...and so on...]
+
+Link: https://www.mongodb.com/docs/manual/reference/method/db.collection.insertMany/
 */
 
 /*
 db.authors.insertMany([
     {
         "_id": "auth2",
-        "name": "Emily Johnson",
+        "name": "Kate Wilson",
         "age": 40,
-        "email": "emily.johnson@mongolive.com",
+        "email": "kate.wilson@mongodemo.com",
         "address": {
             "street": "456 Bay St.",
             "city": "Toronto",
@@ -125,7 +134,7 @@ db.authors.insertMany([
         "_id": "auth3",
         "name": "Sam Simpson",
         "age": 48,
-        "email": "michael.davis@mongolive.com",
+        "email": "michael.davis@mongodemo.com",
         "address": {
             "street": "789 King St.",
             "city": "Vancouver",

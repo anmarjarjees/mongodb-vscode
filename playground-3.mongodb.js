@@ -9,6 +9,8 @@ Two methods:
 - updateOne()
 - updateMany(): To update multiple documents that match a given filter
 
+Link: https://www.mongodb.com/docs/languages/kotlin/kotlin-sync-driver/current/write/update/
+
 Pattern:
 
 db.collection_name.updateMany(
@@ -19,21 +21,24 @@ db.collection_name.updateMany(
 
 Notice that "update()" is a legacy method that can be used to update one or many documents also 
 It has been replaced by "updateOne()"" and "updateMany()" in modern usage
+
+Link: https://www.mongodb.com/docs/php-library/current/reference/method/MongoDBCollection-updateOne/
+Link: https://www.mongodb.com/docs/php-library/current/reference/method/MongoDBCollection-updateMany/
 */
 
 /* 
 Example1:
 Update the rec with id value "auth2",
 by changing name:
-- from "Emily Johnson"
-- to "Emily Jackson"
+- from "Martin Johnson"
+- to "Martin Jackson"
 
 Current Info:
 *************
 _id: "auth2"
-name: "Emily Johnson"
+name: "Martin Johnson"
 age: 40
-email: "emily.johnson@mongolive.com"
+email: "martin.johnson@mongodemo.com"
 
 Notice that:
 1. Although we are using updateMany(),
@@ -45,7 +50,8 @@ Logically speaking and for better readability => we SHOULD use "updateOne()"
 but we could use use it without
 */
 
-/* db.authors.updateMany(
+/* 
+db.authors.updateMany(
     // The filter object:
     {
         "_id": "auth2"
@@ -54,10 +60,11 @@ but we could use use it without
     // The set object:
     {
         "$set": {
-            "name": "Emily Jackson"
+            "name": "Martin Jackson"
         }
     }
-); */
+); 
+*/
 
 /* 
 The output/results of updating:
@@ -101,7 +108,8 @@ by changing age:
 - to 37
 */
 
-/* db.authors.updateOne(
+/* 
+db.authors.updateOne(
     // The filter object:
     {
         "_id": "auth2"
@@ -113,7 +121,8 @@ by changing age:
             "age": 37
         }
     }
-); */
+); 
+*/
 
 /* 
 To recap:
@@ -122,7 +131,8 @@ if there are more, only the first one will be updated
 based on the provided filter
 */
 
-/* db.authors.updateMany(
+/* 
+db.authors.updateMany(
     // The filter object:
     {
         "_id": "auth2"
@@ -134,7 +144,8 @@ based on the provided filter
             "age": 37
         }
     }
-); */
+); 
+*/
 
 /* 
 Example3:
@@ -185,10 +196,12 @@ Replace the entire content/fields of document with id of "auth1"
 with only one field "full_name" and a value:
 */
 
-/* db.authors.replaceOne(
+/* 
+db.authors.replaceOne(
     { "_id": "auth1" },
     { "full_name": "James Dean" }
-) */
+) 
+*/
 
 /* 
 The output/result (notice that the id still needed for sure):

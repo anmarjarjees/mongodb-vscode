@@ -113,10 +113,10 @@ In MongoDB Atlas, we have several options to connect to a cluster, and each opti
 
 # Code Files:
 The contents for each code file (.js file):
-- File#1: Insert/Create document(s) 
-- File#2: Find (search for) document(s)
-- File#3: Update document(s)
-- File#4: Update document(s)
+- File#1: playground-1.mongodb.js => Insert/Create document(s) 
+- File#2: playground-2.mongodb.js => Find (search for) document(s)
+- File#3: playground-3.mongodb.js => Update document(s)
+- File#4: playground-4.mongodb.js => Delete document(s)
 
 # Credits, References, and Recourses:
 - MongoDB Documentation:

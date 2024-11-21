@@ -9,6 +9,8 @@ Two methods:
 - deleteOne()
 - deleteMany()
 
+Link: https://www.mongodb.com/docs/manual/tutorial/remove-documents/
+
 NOTE:
 remove() method is "deprecated"
 Using the same filter for update, find, and replace:
