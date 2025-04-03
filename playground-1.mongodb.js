@@ -134,7 +134,7 @@ db.authors.insertMany([
         "_id": "auth3",
         "name": "Sam Simpson",
         "age": 48,
-        "email": "michael.davis@mongodemo.com",
+        "email": "sam.simpson@mongodemo.com",
         "address": {
             "street": "789 King St.",
             "city": "Vancouver",
